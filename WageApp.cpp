@@ -6,7 +6,7 @@
 using namespace std;
 
 // Function to format numbers with commas and 2 decimal places
-string formatWithCommas(double value) {
+string formatDec(double value) {
     stringstream ss;
     ss << fixed << setprecision(2) << value;
 
@@ -71,11 +71,11 @@ int main() {
     cout << "Job Description  : " << jobDesc << '\n';
     cout << "Payroll Date     : " << payrollDate << '\n';
     cout << "-------------------------------------\n";
-    cout << "Gross Pay        : PHP " << formatWithCommas(grossPay) << '\n';
+    cout << "Gross Pay        : PHP " << formatDec(grossPay) << '\n';
     cout << "Tax Rate         : " << fixed << setprecision(2)
         << taxRate * 100 << "%\n";
-    cout << "Deductions       : PHP " << formatWithCommas(taxAmount) << '\n';
-    cout << "Net Pay          : PHP " << formatWithCommas(netPay) << '\n';
+    cout << "Deductions       : PHP " << formatDec(taxAmount) << '\n';
+    cout << "Net Pay          : PHP " << formatDec(netPay) << '\n';
     cout << "=====================================\n";
     cout << "Press Enter to exit...";
     cin.ignore();
